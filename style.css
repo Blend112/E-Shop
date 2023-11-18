@@ -1,0 +1,31 @@
+.div-ul
+	{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: baseline;
+		align-content: center;
+	}
+
+.logoImg{
+	max-width: 100px;
+}
+.teksti{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: baseline;
+	align-content: stretch;
+}
+
+.teksti ul li {
+	padding: 10px;
+}
+.SearchBox{
+	display: flex;
+}
+.gaming img{
+max-width: 300px;
+}

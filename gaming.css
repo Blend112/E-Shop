@@ -1,0 +1,90 @@
+a:active{
+    text-decoration: line;
+}
+.div-ul{
+        background-color:rgb(206, 138, 10);
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+	}
+    .ul2{
+        width: 1460px;
+        display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+    }
+    .tvclass {
+        list-style-type:none ;
+        
+    }
+    .tvclass a{
+      color: white;
+      text-decoration: none;
+        
+    }
+
+.logoImg{
+	width: 100px;
+    height: 100px;
+}
+.teksti{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: baseline;
+   
+	align-content: stretch;
+}
+.teksti ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.teksti ul li {
+	padding: 10px;
+}
+.SearchBox{
+    height: 36px;
+}
+.gaming img{
+max-width: 300px;
+max-height: 300px;
+width: 300px;
+height: 300px;
+margin: 25px;
+object-fit: contain;
+
+
+}
+.img1{
+    width: 350px;
+    background-color: white;
+    margin-bottom: 25px;
+    height: 460px;
+
+   
+
+}
+.gaming
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: baseline;
+        align-content: stretch;
+        max-width: 1500px;
+        
+        
+    
+    }
+  .gamingp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(237, 237, 237);
+  }

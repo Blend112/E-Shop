@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login Form</title>
 <style>
-
+  
   body {
     font-family: Arial, sans-serif;
     background: #f7f7f7;
@@ -16,7 +16,13 @@
     background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 15px;
+  }
+  .login-container img {
+    display: block;
+    margin: 0 auto 20px; /* Centers the logo and adds space below */
+    max-width: 100%; /* Ensures the logo is responsive and fits the container */
+    height: auto;
   }
   .login-container h2 {
     text-align: center;
@@ -31,7 +37,7 @@
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 10px; /
   }
   .login-container button {
     padding: 10px;
@@ -39,23 +45,22 @@
     border: none;
     color: white;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 10px; 
   }
   .login-container button:hover {
     background: #e64a19;
-     border-radius: 10px;
   }
   .login-container .alternative {
     text-align: center;
     margin-top: 20px;
-    border-radius: 10px;
   }
 </style>
 </head>
 <body>
 
 <div class="login-container">
-  <h2>Login to E-Shop</h2>
+  <img src="C:\Users\Lindi\Documents\GitHub\E-Shop\fotot per projekt\logot\logo.png" alt="logo.png"> 
+  <h2>Login to Your Account</h2>
   <form action="/login" method="post">
     <input type="email" name="email" placeholder="Email address" required>
     <input type="password" name="password" placeholder="Password" required>

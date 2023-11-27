@@ -1,0 +1,170 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+header {
+    background-color: orange;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+}
+
+.banner {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.category-overview {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.category {
+    text-align: center;
+}
+
+.category a {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.featured-products {
+    padding: 20px;
+}
+
+
+.promotions {
+    background-color: #fffbe6;
+    padding: 20px;
+}
+
+
+.testimonials {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.newsletter {
+    background-color: #fffbe6;
+    padding: 20px;
+    text-align: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+.login-button {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; 
+    background-color: #f7f7f7; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-right: 10px; /
+}
+
+.search-bar input[type="text"] {
+    border: none; 
+    padding: 5px; 
+    margin-right: 5px; 
+    border-radius: 3px; 
+}
+
+.search-bar .login-button {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}

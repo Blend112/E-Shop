@@ -50,6 +50,7 @@
 }
 .gaming img{
 max-width: 300px;
+<<<<<<< Updated upstream
 max-height: 300px;
 width: 300px;
 height: 300px;
@@ -87,6 +88,9 @@ object-fit: contain;
     background-color: rgb(237, 237, 237);
   }
 
+=======
+}
+>>>>>>> Stashed changes
 
 /* Resetting default margin and padding */
 * {
@@ -156,8 +160,11 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+<<<<<<< Updated upstream
 
 a:active{
     text-decoration: underline;
     color: #333;
 }
+=======
+>>>>>>> Stashed changes

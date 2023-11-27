@@ -1,32 +1,15 @@
-
-.div-ul{
-        background-color:rgb(206, 138, 10);
-        display: flex;
-        justify-content: center;
-        margin-bottom: 25px;
-	}
-    .ul2{
-        width: 1460px;
-        display: flex;
+.div-ul
+	{
+		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
-		align-items: center;
+		align-items: baseline;
 		align-content: center;
-    }
-    .tvclass {
-        list-style-type:none ;
-        
-    }
-    .tvclass a{
-      color: white;
-      text-decoration: none;
-        
-    }
+	}
 
 .logoImg{
-	width: 100px;
-    height: 100px;
+	max-width: 100px;
 }
 .teksti{
 	display: flex;
@@ -34,131 +17,106 @@
 	flex-wrap: nowrap;
 	justify-content: flex-end;
 	align-items: baseline;
-   
 	align-content: stretch;
-}
-.teksti ul{
-    display: flex;
-    justify-content: space-between;
 }
 
 .teksti ul li {
 	padding: 10px;
 }
 .SearchBox{
-    height: 36px;
+	display: flex;
 }
 .gaming img{
 max-width: 300px;
-<<<<<<< Updated upstream
-max-height: 300px;
-width: 300px;
-height: 300px;
-margin: 25px;
-object-fit: contain;
-
-
 }
-.img1{
-    width: 350px;
-    background-color: white;
-    margin-bottom: 25px;
-    height: 460px;
 
-   
 
-}
-.gaming
-    {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: baseline;
-        align-content: stretch;
-        max-width: 1500px;
-        
-        
-    
-    }
-  .gamingp{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(237, 237, 237);
-  }
-
-=======
-}
->>>>>>> Stashed changes
-
-/* Resetting default margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
+/* Stilet e trupit */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
-/* Container styles */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    width: 100%;
+    max-width: 1200px; /* Rregullo gjerësinë maksimale sipas nevojës */
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Header (Logo) styles */
 .header {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
 }
 
 .logo {
-    width: 100px; /* Adjust size as needed */
+    flex: 1;
+}
+
+.logoImg {
+    width: 100px; /* Rregullo madhësinë e logot sipas nevojës */
     height: auto;
 }
 
-/* Login form styles */
-.login-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.searchBox {
+    flex: 2;
+    padding: 0 10px;
 }
 
-.login-form h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-input[type="text"],
-input[type="password"],
-button {
+input[type="text"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
 }
 
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.navigation ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
 }
 
-button:hover {
-    background-color: #0056b3;
+.navigation ul li {
+    margin-left: 20px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Stilet e përgjigjshme */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchBox {
+        padding: 10px 0;
+    }
+
+    .navigation ul {
+        justify-content: center;
+    }
+
+    .navigation ul li {
+        margin: 0 10px;
+    }
 }
 <<<<<<< Updated upstream
 

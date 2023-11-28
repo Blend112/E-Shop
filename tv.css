@@ -55,7 +55,7 @@ a:active{
 .SearchBox{
     height: 36px;
 }
-.gaming img{
+.tv img{
 max-width: 300px;
 max-height: 300px;
 width: 300px;
@@ -79,8 +79,7 @@ object-fit: contain;
    
 
 }
-.gaming
-    {
+.tv{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -92,7 +91,7 @@ object-fit: contain;
         
     
     }
-  .gamingp{
+  .tvp{
     width: 100%;
     display: flex;
     justify-content: center;

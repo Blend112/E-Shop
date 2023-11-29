@@ -1,0 +1,92 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+.login-button {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; 
+    background-color: #f7f7f7; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-right: 10px; /
+}
+
+.search-bar input[type="text"] {
+    border: none; 
+    padding: 5px; 
+    margin-right: 5px; 
+    border-radius: 3px; 
+}
+.search-bar .login-button {
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.div-ul{
+    background-color:rgb(206, 138, 10);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.ul2{
+    width: 1460px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.tvclass {
+    list-style-type:none ;
+    
+}
+.tvclass a{
+  color: white;
+  text-decoration: none;
+    
+}
+
+.logoImg{
+width: 100px;
+height: 100px;
+}
+.teksti{
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-end;
+align-items: baseline;
+
+align-content: stretch;
+}
+.teksti ul{
+display: flex;
+justify-content: space-between;
+}
+
+.teksti ul li {
+padding: 10px;
+}
+.teksti li{
+/* font-size: x-large; */
+}

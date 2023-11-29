@@ -52,6 +52,9 @@ a:active{
 .teksti ul li {
 	padding: 10px;
 }
+.teksti li{
+    /* font-size: x-large; */
+}
 .SearchBox{
     height: 36px;
 }

@@ -6,10 +6,7 @@ body {
     color: #333;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
+
 
 
 header {
@@ -39,17 +36,7 @@ nav ul li {
     display: flex;
     align-items: center;
 }
-}
 
-.banner {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.banner img {
-    width: 100%;
-    height: auto;
-}
 
 .category-overview {
     display: flex;
@@ -167,4 +154,43 @@ footer .social-media {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
+}
+
+.category {
+    position: relative;
+    text-align: center;
+}
+
+.category img {
+    width: 300px;
+    height: 200px;
+    transition: opacity 0.3s ease;
+    object-fit: contain;
+    background-color: #f7f7f7;
+}
+
+.category-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category:hover .category-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+.category:hover img {
+    opacity: 0.3; 
 }

@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Shop</title>
+    <link rel="stylesheet" href="combined.css">
     <link rel="stylesheet" href="stiliperindex.css">
-    <link rel="stylesheet" href="navbar.css">
+
+    
+    <!-- Bootstrap per slider -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+       
 </head>
+
 <body>
 
     <div class="div-ul">
@@ -17,9 +27,10 @@
        
         <div class="teksti">
             <ul>
-                <li class="tvclass"><a href="tv.html">Tv aksesore</a>
-                <li class="tvclass"><a href="smartphones.html">Smartphones</a></li>
-                <li class="tvclass"><a href="gaming.html">Gaming</a></li>
+                <li id="links"><a href="index.html">Home</a>
+                    <li id="links"><a href="tv.html">TV Accessories</a>
+                    <li id="links"><a href="smartphones.html">Smartphones</a></li>
+                    <li id="links"><a href="gaming.html">Gaming</a></li>
             </ul>
         </div>
         <div class="search-bar">
@@ -31,37 +42,95 @@
     </div>
     </div>
 
+<div class="row">
+    <div class="col-sm-12">
+        <div id="demo" class="carousel slide" data-ride="carousel">
 
-<section class="banner">
-    <img src="fotot per projekt/indexfoto/bannner.png" alt="Banner"> <!-- qitu banneri edhe fotot spo dalin pse sdi-->
-</section>
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+          
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="fotot per projekt/indexfoto/bannner.png" alt="Our thing" >
+            </div>
+            <div class="carousel-item">
+              <img src="fotot per projekt\tv,aksesore\tv samsung 2.webp" alt="interior">
+            </div>
+            <div class="carousel-item">
+              <img src="fotot per projekt\tv,aksesore\tv samsung 1.webp" alt="dream" >
+            </div>
+          </div>
+          
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+    </div>
+</div>
 
 
 <section class="category-overview">
     <div class="category" id="tv-accessories">
-        <h2>TV Accessories</h2>
-        <p>pershkrim</p>
-        <a href="tv.html">Shop Now</a> 
-    <div class="category" id="gaming">
-        <h2>Gaming</h2>
-        <p>pershkrim Gaming Products</p>
-        <a href="gaming.html">Shop Now</a> 
+        <img src="fotot per projekt\tv,aksesore\telekomand 1.webp" alt="TV Accessories">
+        <div class="category-info">
+            <h2>TV Accessories</h2>
+            <p>Description of TV Accessories</p>
+            <a href="tv.html">Shop Now</a> 
+        </div>
     </div>
+    
+    <div class="category" id="gaming">
+        <img src="fotot per projekt\gaming\pc2.webp" alt="Gaming">
+        <div class="category-info">
+            <h2>Gaming</h2>
+            <p>Description of Gaming Products</p>
+            <a href="gaming.html">Shop Now</a> 
+        </div>
+    </div>
+
     <div class="category" id="smartphones">
-        <h2>Smartphones</h2>
-        <p>pershkrim Smartphones</p>
-        <a href="smartphones.html">Shop Now</a>
+        <img src="fotot per projekt\smartphones\iphone 15 plus.webp" alt="Smartphones">
+        <div class="category-info">
+            <h2>Iphone 15 Plus</h2>
+            <p>264GB, 1 Year Warranty, +Case</p>
+            <a href="smartphones.html">Shop Now</a>
+        </div>
     </div>
 </section>
 
-<section class="featured-products">
-    <h2>Featured Products</h2>
-    <!-- Shtoni produktet këtu -->
-</section>
 
 <section class="promotions">
     <h2>Current Promotions</h2>
+    <div class="promotion-item">
+        <img src="path/to/promotion-image1.jpg" alt="Zbritje pa fund!">
+        <p>Details about Promotion 1</p>
+    </div>
+    <div class="promotion-item">
+        <img src="path/to/promotion-image2.jpg" alt="Zbritje pa fund!">
+        <p>Details about Promotion 2</p>
+    </div>
+    <!-- More promotions can be added here -->
 </section>
+
+<footer>
+  
+    <div class="social-media">
+       
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://twitter.com">Twitter</a>
+        <a href="https://instagram.com">Instagram</a>
+    </div>
+    <p>&copy; 2023 E-Shop. All rights reserved.</p>
+</footer>
 
 <footer>
    

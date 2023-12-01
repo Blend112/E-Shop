@@ -1,0 +1,13 @@
+#links {
+    color: white;
+    list-style-type: none;
+}
+
+#links a {
+    text-decoration: none;
+}
+
+#links a:hover {
+    color: black; 
+}
+

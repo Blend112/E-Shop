@@ -71,11 +71,7 @@ body {
     margin-right: 20px; /* Shto hapësirë midis elementeve të listës */
   }
   
-  .navigation ul li a {
-    text-decoration: none; /* Hiq nënvizimet nga lidhjet */
-    color: #333; /* Cakto ngjyrën e lidhjeve */
-    /* Shto stile të tjera sipas nevojës */
-  }
+ 
   
   
 

@@ -11,7 +11,10 @@
     background: #f7f7f7;
   }
   .register-container {
+    height: 550px;
     width: 300px;
+    display: flex;
+    flex-direction:column ;
     margin: 100px auto;
     background: #fff;
     padding: 20px;
@@ -22,7 +25,7 @@
     display: block;
     margin: 0 auto 20px;
     max-width: 100%; 
-    height: auto;
+    height: 178px;
   }
   .register-container h2 {
     text-align: center;
@@ -34,7 +37,10 @@
   }
   .register-container input[type="text"],
   .register-container input[type="email"],
-  .register-container input[type="password"] {
+  .register-container input[type="password"],
+  .register-container input[type="confirm_password"]
+  
+  {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -47,6 +53,8 @@
     color: white;
     cursor: pointer;
     border-radius: 10px; 
+    margin-bottom: 30px;
+  
   }
   .register-container button:hover {
     background: #e64a19;
@@ -55,6 +63,25 @@
     text-align: center;
     margin-top: 20px;
   }
+  footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
 </style>
 </head>
 <body>
@@ -62,17 +89,69 @@
 <div class="register-container">
   <img src="fotot per projekt\logot\logo.png" alt="Logo"> 
   <h2>Register a New Account</h2>
-  <form action="/register" method="post">
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="email" name="email" placeholder="Email address" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-    <button type="submit">Register</button>
+  <!-- <form action="/register" method="post"> -->
+    <input id="username" type="text" name="username" placeholder="Username" required>
+    <div id="usernameError"></div>
+
+    <input id="email" type="email" name="email" placeholder="Email address" required>
+    <div id="emailError"></div>
+
+    <input id="password" type="password" name="password" placeholder="Password" required>
+    <div id="passwordError"></div>
+
+    <input id="passwordconfirm" type="password" name="confirm_password" placeholder="Confirm Password" required>
+    <div id="confirm_passwordError"></div>
+
+    <button type="submit" onclick="register()">Register</button>
     <div class="alternative">
+
       <a href="login.html">Already have an account? Login</a>
     </div>
-  </form>
+  <!-- </form> -->
 </div>
+<script>
+    let usernameRegex = /^.{8,15}$/;
+    let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+    let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+  function register(){
+    
 
-</body>
-</html>
+    let emailInput = document.getElementById('email');
+    let emailError = document.getElementById('emailError');
+    let usernameInput = document.getElementById('username');
+    let usernameError = document.getElementById('usernameError');
+    let passwordInput = document.getElementById('password');
+    let passwordError = document.getElementById('passwordError');
+    let confirmPasword = document.getElementById('passwordconfirm');
+    let confirmPaswordError = document.getElementById('confirm_passwordError');
+    if(!(passwordInput.value == confirmPasword.value)){
+        confirm_PaswordError.innerHTML = "<p> the password must match </p>"
+        return;
+    }
+
+    emailError.innerText = '';
+    usernameError.innerText = '';
+    passwordError.innerText = '';
+
+
+        if(!usernameRegex.test(usernameInput.value)){
+            usernameError.innerText = 'The user name must have 8-15 characters';
+            return;
+        }
+        if(!emailRegex.test(emailInput.value)){
+            emailError.innerText = 'The email is invalid here is an example: "example@gmail.com"';
+            return;
+        }
+        if(!passwordRegex.test(passwordInput.value)){
+            passwordError.innerText = 'The password must have at least 8 characters and begin with a capital letter';
+            return;
+        }
+
+        alert('You have registered successfully!');
+    }
+
+
+
+</script>
+
+

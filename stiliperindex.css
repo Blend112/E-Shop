@@ -1,24 +1,11 @@
 
 body {
+    max-width: 100%;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
-}
-
-
-
-
-header {
-    background-color: orange;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    height: 100px;
+    overflow-x: hidden;
 }
 
 nav ul {
@@ -30,6 +17,25 @@ nav ul {
 
 nav ul li {
     margin-left: 20px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+
+}
+#sliderbutton{
+    width: 75px;
+    color: whitesmoke;
+    margin-top: 25px;
+    height: 25px;
+    background-color: #ffa500;
+    border: none;
+    
+
 }
 
 .search-bar {
@@ -43,6 +49,7 @@ nav ul li {
     justify-content: space-around;
     padding: 20px;
     background-color: #f7f7f7;
+    margin-top: 25px;
 }
 
 .category {
@@ -50,7 +57,7 @@ nav ul li {
 }
 
 .category a {
-    background-color: orange;
+    background-color: #ffa500;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -61,39 +68,6 @@ nav ul li {
     padding: 20px;
 }
 
-
-.promotions {
-    background-color: #fffbe6;
-    padding: 20px;
-}
-
-
-.testimonials {
-    padding: 20px;
-    background-color: #f7f7f7;
-}
-
-.newsletter {
-    background-color: #fffbe6;
-    padding: 20px;
-    text-align: center;
-}
-
-.newsletter input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin-right: 10px;
-}
-
-.newsletter button {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 
 footer {
@@ -136,7 +110,6 @@ footer .social-media {
     padding: 5px 10px; 
     border-radius: 5px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    margin-right: 10px; /
 }
 
 .search-bar input[type="text"] {

@@ -11,6 +11,11 @@ body {
     color: #333;
 }
 
+.row{
+    width: 100%;
+
+}
+
 
 a:active {
     text-decoration: none;
@@ -182,7 +187,7 @@ footer .social-media a {
 }
 
 .carousel img {
-    width: 100%;
+    width: 10%;
     height: 400px;
     }
 
@@ -191,8 +196,9 @@ footer .social-media a {
     }
 
     #fotoja{
-        width: 100%;
+        width: 900px;
     }
+
 
 
 @media screen and (max-width: 768px) {

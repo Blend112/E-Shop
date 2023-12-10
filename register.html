@@ -112,7 +112,7 @@ footer .social-media {
 <script>
     let usernameRegex = /^.{8,15}$/;
     let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-    let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    let passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
   function register(){
     
 
@@ -143,7 +143,7 @@ footer .social-media {
             return;
         }
         if(!passwordRegex.test(passwordInput.value)){
-            passwordError.innerText = 'The password must have at least 8 characters and begin with a capital letter';
+            passwordError.innerText = 'The password must have at least 8 characters a number and begin with a capital letter';
             return;
         }
 

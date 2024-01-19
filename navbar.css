@@ -90,3 +90,9 @@ padding: 10px;
 .teksti li{
 /* font-size: x-large; */
 }
+
+@media (max-width: 768px){
+    .teksti{
+        display: none;
+    }
+}

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming</title>
     <link rel="stylesheet" href="combined.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
   <div class="div-ul">
@@ -12,22 +14,28 @@
     <div class="image">
         <img src="fotot per projekt/logot/logo.png" alt="logo" class="logoImg">
     </div>
-   
+
     <div class="teksti">
         <ul>
-          <li id="links"><a href="index.html">Home</a>
-            <li id="links"><a href="tv.html">TV Accessories</a>
-            <li id="links"><a href="smartphones.html">Smartphones</a></li>
-            <li id="links"><a href="gaming.html">Gaming</a></li>
+            <li id="links"><a href="index.html">Home</a>
+                <li id="links"><a href="tv.html">TV Accessories</a>
+                <li id="links"><a href="smartphones.html">Smartphones</a></li>
+                <li id="links"><a href="gaming.html">Gaming</a></li>
         </ul>
     </div>
-    
     <div class="search-bar">
       <input type="text" placeholder="Search...">
-      <a class="login-button" style="user-select: none;">Search</a> 
       <a href="login.html" class="user-button"><img src="fotot per projekt/logot/user.png" style="max-width: 25px; margin-top: 5px;" alt=""></a>
   </div>
-  
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="tv.html">TV Accessories</a>
+        <a href="smartphones.html">Smartphones</a>
+        <a href="gaming.html">Gaming</a>
+    </div>
+  </div>
   </div>
 </div>
 </div>
@@ -117,5 +125,8 @@
 <footer>
   
 </footer>
+<script src="drop_down.js">
+
+</script>
 </body>
 </html>

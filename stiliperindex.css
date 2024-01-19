@@ -162,3 +162,6 @@ footer .social-media {
 .category:hover img {
     opacity: 0.3; 
 }
+#fotoSlider{
+    max-width: 100%;
+}

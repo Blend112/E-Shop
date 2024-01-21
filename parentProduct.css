@@ -1,0 +1,79 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1000px;
+    background-color: #2d2d2d;
+    border-radius: 20px;
+    overflow: clip;
+    height: 550px;
+    align-items: center;
+
+}
+.fotoja{
+    background-color: #ffff;
+    width: 280px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+#img{
+    width: 190px;
+    height: 224px;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    gap: 15px;
+
+    
+    
+}
+
+.tedhenat{
+    color: rgb(255, 255, 255);
+}
+
+.tabela{
+    background-color: #2d2d2d;
+    width: 1000px;
+    border-radius: 20px;
+    
+}
+table{
+    padding-left:  20px;
+    height: 144px;
+    color: rgb(254, 254, 254);
+    width: 100%;
+}
+.containerParent{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 150px;
+}
+
+
+@media (max-width: 768px){
+    .teksti{
+        display: none;
+    }
+
+}
+
+@media (max-width : 1000px) {
+    .container{
+        width: 90%;
+        flex-direction: column;
+    }
+    .tabela{
+        width: 90%;
+    }
+
+}

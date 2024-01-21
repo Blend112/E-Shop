@@ -1,0 +1,56 @@
+
+.formContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 100px;
+    margin-top: 75px;
+}
+
+.forma{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 800px;
+    gap: 10px;
+    margin-inline: auto;
+}
+input{
+    width: 375px;
+    height: 60px;
+    padding: 10px;
+}
+input[type="number"]{
+    width: 760px;
+}
+textarea{
+    width: 760px;
+    padding: 10px;
+}
+#formButton{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: orange;
+    margin-inline: auto;
+    border-radius: 10px;
+}
+@media (max-width:820px){
+    .formContainer{
+        width: 400px;
+        margin-inline: auto;
+    }
+    .forma{
+        width: 400px;
+    }
+    input[type="number"]{
+        width: 375px;
+    }
+    textarea{
+        width: 375px;
+        padding: 10px;
+    }
+}

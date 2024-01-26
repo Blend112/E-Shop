@@ -19,31 +19,31 @@
     <input type="number" name="nrShasise"></p> -->
 
     <div class="form-group">
-      <label for="modeli">lloji :</label>
+      <label for="lloji">lloji :</label>
       <input type="text" name="lloji" required>
     </div>
     <div class="form-group">
-      <label for="kilometrat">titulli :</label>
+      <label for="titulli">titulli :</label>
       <input type="text" name="titulli" required>
     </div>
     
     <div class="form-group">
-      <label for="MadhesiaMotorrit">tekstikryesor :</label>
+      <label for="tekstikryesor">tekstikryesor :</label>
       <input type="text" name="tekstikryesor" required>
     </div>
 
     <div class="form-group">
-      <label for="llojiKariserise">llojiperformances :</label>
+      <label for="llojiperformances">llojiperformances :</label>
       <input type="text" name="llojiperformances" required>
     </div>
 
     <div class="form-group">
-      <label for="karburanti">performanca :</label>
+      <label for="performanca">performanca :</label>
       <input type="text" name="performanca" required>
     </div>
 
     <div class="form-group">
-      <label for="llojiKariserise">lloji :</label>
+      <label for="lloji">lloji :</label>
         <select name="lloji" id="lloji">
             <option value="Tv">Tv</option>
             <option value="Smartphone">Smartphone</option>
@@ -59,20 +59,24 @@
 
 
     <div class="form-group">
-      <label for="ps">ngjyra :</label>
+      <label for="ngjyra">ngjyra :</label>
       <input type="text" name="ngjyra" required>
     </div>
 
     <div class="form-group">
-      <label for="cmimi">viti :</label>
+      <label for="viti">viti :</label>
       <input type="number" name="viti" required>
+    </div>
+    <div class="form-group">
+      <label for="cmimi">cmimi :</label>
+      <input type="number" name="cmimi" required>
     </div>
 
 
     <div class="form-group">
       <fieldset class = "fieldFoto">
           <legend>Fotoja :</legend>
-          <input class="inputFoto" type="file" name="fotokryesore" required>
+          <input class="inputFoto" type="file" name="fotoKryesor" required>
       </fieldset>
     </div><br>
     

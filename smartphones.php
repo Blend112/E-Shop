@@ -1,6 +1,6 @@
 <?php 
     include 'baseCode.php';
-    $obj = new LidhjaDB();
+    $obj = new products();
 
 ?>
 
@@ -23,40 +23,9 @@
       
         <div class="smartphonesp">
           <div class="smartphones">
-            <div class="img1">
-        <img src="fotot per projekt/smartphones/google pixel 6.webp" alt="googlepx ">
-        <h3>Google Pixel 6 5G</h3>
-          <p>$879.22</p>
-            </div>
-        <div class="img1"><img src="fotot per projekt/smartphones/google pixel 8.webp" alt="googlepx2 ">
-          <h3>Google Pixel 8 Pro 5G</h3>
-          <p>$999.99</p>
-        </div>
-        <div class="img1"><img src="fotot per projekt/smartphones/iphone 14.webp" alt="iphone14">
-          <h3>Iphone 14</h3>
-          <p>$799.99</p>
-        </div>
-        <div class="img1"><img src="fotot per projekt/smartphones/iphone 14pro max.webp" alt="iphone14promax">
-          <h3>Iphone 14 pro max</h3>
-          <p>$1199.99</p>
-        </div>
-        <div class="img1"><img src="fotot per projekt/smartphones/iphone 15 plus.webp" alt="iphone15plus">
-          <h3>Iphone 15 plus</h3>
-          <p>$1250.00</p>
-        </div>
-        <div class="img1"><img src="fotot per projekt/smartphones/iphone 15 pro.webp" alt="iphone15">
-          <h3>Iphone 15 pro</h3>
-          <p>$1350.00</p>
-        </div>
-        <div class="img1"><img src="fotot per projekt/smartphones/samsung s22.webp" alt="samsungs22">
-          <h3>Samsung S22</h3>
-          <p>$799.99</p>
-        </div>
-        <div class="img1"><img src="fotot per projekt/smartphones/samsung s23.webp" alt="samsungs23">
-          <h3>Samsung S23 Ultra</h3>
-          <p>$1199.99</p>
-        </div>
-        </div>
+            <?php
+            $obj->getSmartphones();
+            ?>
           </div>
         </div>
         

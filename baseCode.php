@@ -71,20 +71,17 @@ class Upload extends LidhjaDB{
   }
 
 
-  public function insertCar(){
+  public function insertProduct(){
     $this->time = time();
-    $sql = "INSERT INTO produkti VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    $stmt = $this -> conn -> prepare($sql);
-    $stmt -> bind_param("isssssssss", $this->time, $_POST['Prodhuesi'], $_POST['vitiProdhimit'], $_POST['kilometrat'],
-      $_POST['MadhesiaMotorrit'],$_POST['llojiKariserise'], $_POST['llojiShpejtesis'], $_POST['meCilatNgreh'],
-      $_POST['modeli'],$_POST['karburanti'],$_POST['ps'],$_POST['Dogan'],$_POST['Regjistrim']);
-    $stmt -> execute();
-    $stmt -> close();
+    $sql = "INSERT INTO produkti VALUES (".$this->time.", '".$_POST['lloji']."','".$_POST['titulli']."', '".$_POST['tekstikryesor']."'
+    , '"."parentProductPhotos/". $this->time ."/fotoKryesore.webp"."', '".$_POST['llojiperformances']."', '".$_POST['performanca']."', '".$_POST['garancioni']."'
+    , '".$_POST['ngjyra']."', '".$_POST['viti']."','".$_POST['cmimi']."')";
+    $this->conn->query($sql);
   }
 
   public function createFolder(){
-    mkdir('productPhotos/' . $this->time);
-    $this -> uploadDir = 'productPhotos/' . $this->time . '/'; 
+    mkdir('parentProductPhotos/' . $this->time);
+    $this -> uploadDir = 'parentProductPhotos/' . $this->time . '/'; 
     if (!is_dir($this -> uploadDir)) {
         mkdir($this -> uploadDir, 0777, true);
     }
@@ -94,10 +91,42 @@ class Upload extends LidhjaDB{
 
   public function insertAll(){
     if ($this -> isMethodPost()){
-      $this -> insertCar();
+      $this -> insertProduct();
       $this -> createFolder();
     }
   }
+
+}
+class products extends LidhjaDB{
+    public function getSmartphones(){
+      $sql = "Select * from produkti where lloji = 'Smartphone'";
+      $result = $this->conn->query($sql);
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+      
+      echo '<div class="img1">
+              <a href = "parent.product.php?product='.$row['numriId'].'">
+                  <img src="'.$row['fotokryesore'].'" alt="googlepx ">
+                  </a>
+                  <h3>'.$row['titulli'].'</h3>
+                  <p>'.$row['cmimi'].'</p>
+                
+            </div>';
+      }
+    }
+  }
+}
+class parentProduct extends LidhjaDB{
+  public $row;
+  public function getProduct(){
+    return isset($_GET['product']) ? $_GET['product'] : null;
+  }
+  public function getProductInfo(){
+    $getProductQuery = 'Select * from produkti where numriId = ' . $this->getProduct();
+    $result = $this->conn->query($getProductQuery);
+    $this->row = $result->fetch_assoc();
+  }
+
 
 }
 ?>

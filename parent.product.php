@@ -1,6 +1,6 @@
 <?php 
     include 'baseCode.php';
-    $obj = new LidhjaDB();
+    $obj = new parentProduct();
 
 ?>
 
@@ -21,17 +21,19 @@
 
     <?php 
     $obj->getHeader();
+    $obj->getProductInfo();
 
 ?>
     <div class="containerParent">
     <div class="container">
         <div class="fotoja">
-            <img id="img" src="fotot per projekt/gaming/kufje 1.webp" alt="kufje">
+            <img id="img" src="<?=$obj->row['fotokryesore']?>" alt="kufje">
 
         </div>
         <div class="tedhenat">
-            <h1>Titulli</h1>
-            <p>huhduwuewnouvnweuovnwinvi</p>
+            <h1><?=$obj->row['titulli']?></h1>
+            <p><?=$obj->row['tekstikryesor']?></p>
+            <p><?=$obj->row['cmimi']?></p>
             <a href=""></a>
 
         </div>
@@ -40,20 +42,20 @@
     <div class="tabela">
         <table>
             <tr class="tableRow">
-                <td></td>
-                <td></td>
+                <td><?=$obj->row['llojiperformances']?></td>
+                <td><?=$obj->row['performanca']?></td>
             </tr>
             <tr class="tableRow">
                 <td>Garancioni</td>
-                <td></td>
+                <td><?=$obj->row['garancioni']?></td>
             </tr>
             <tr class="tableRow">
                 <td>Ngjyra</td>
-                <td></td>
+                <td><?=$obj->row['ngjyra']?></td>
             </tr>
             <tr class="tableRow">
                 <td>Viti</td>
-                <td></td>
+                <td><?=$obj->row['viti']?></td>
             </tr>
         </table>
     </div>

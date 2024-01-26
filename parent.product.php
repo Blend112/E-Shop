@@ -1,3 +1,9 @@
+<?php 
+    include 'baseCode.php';
+    $obj = new LidhjaDB();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,36 +19,10 @@
 
 <body>
 
-    <div class="div-ul">
-        <div class="ul2">
-        <div class="image">
-            <img src="fotot per projekt/logot/logo.png" alt="logo" class="logoImg">
-        </div>
-    
-        
-    
-        <div class="teksti">
-            <ul>
-                <li id="links"><a href="index.html">Home</a>
-                    <li id="links"><a href="tv.html">TV Accessories</a>
-                    <li id="links"><a href="smartphones.html">Smartphones</a></li>
-                    <li id="links"><a href="gaming.html">Gaming</a></li>
-                    <li id="links"><a href="contactus.html">Contact Us</a></li>
-            </ul>
-        </div>
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="index.html">Home</a>
-            <a href="smartphones.html">Smartphones</a>
-            <a href="gaming.html">Gaming</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="tv.html">Tv Aksesore</a>
-        </div>
-      </div>
-      </div>
-    </div>
-    </div>
+    <?php 
+    $obj->getHeader();
+
+?>
     <div class="containerParent">
     <div class="container">
         <div class="fotoja">

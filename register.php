@@ -1,3 +1,9 @@
+<?php 
+    include 'baseCode.php';
+    $obj = new LidhjaDB();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

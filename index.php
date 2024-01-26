@@ -1,3 +1,9 @@
+<?php 
+    include 'baseCode.php';
+    $obj = new LidhjaDB();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,39 +17,11 @@
 </head>
 
 <body onload="nddroFoton()">
+<?php 
+    $obj->getHeader();
 
-    <div class="div-ul">
-        <div class="ul2">
-        <div class="image">
-            <img src="fotot per projekt/logot/logo.png" alt="logo" class="logoImg">
-        </div>
+?>
 
-    
-        <div class="teksti">
-            <ul>
-                <li id="links"><a href="index.html">Home</a>
-                    <li id="links"><a href="tv.html">TV Accessories</a>
-                    <li id="links"><a href="smartphones.html">Smartphones</a></li>
-                    <li id="links"><a href="gaming.html">Gaming</a></li>
-                    <li id="links"><a href="contactus.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <a href="login.html" class="user-button"><img src="fotot per projekt/logot/user.png" style="max-width: 25px; margin-top: 5px;" alt=""></a>
-      </div>
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="index.html">Home</a>
-            <a href="tv.html">TV Accessories</a>
-            <a href="smartphones.html">Smartphones</a>
-            <a href="gaming.html">Gaming</a>
-            <a href="contactus.html">Contact Us</a>
-        </div>
-      </div>
-      </div>
-    </div>
 <div class="row">
               <img src="" alt="Our thing" id="fotoSlider">
               <button id="sliderbutton" onclick="nddroFoton()">NEXT</button>
@@ -71,7 +49,7 @@
         <div class="category-info">
             <h2>TV Accessories</h2>
             <p>Description of TV Accessories</p>
-            <a href="tv.html">Shop Now</a> 
+            <a href="tv.php">Shop Now</a> 
         </div>
     </div>
     
@@ -80,7 +58,7 @@
         <div class="category-info">
             <h2>Gaming</h2>
             <p>Description of Gaming Products</p>
-            <a href="gaming.html">Shop Now</a> 
+            <a href="gaming.php">Shop Now</a> 
         </div>
     </div>
 
@@ -89,29 +67,16 @@
         <div class="category-info">
             <h2>Iphone 15 Plus</h2>
             <p>264GB, 1 Year Warranty, +Case</p>
-            <a href="smartphones.html">Shop Now</a>
+            <a href="smartphones.php">Shop Now</a>
         </div>
     </div>
 </section>
 
 
 </section>
-
-    <footer>
-    
-        <div class="social-media">
-        
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://instagram.com">Instagram</a>
-        </div>
-        <br>
-        <p>&copy; 2023 E-Shop. All rights reserved.</p>
-    </footer>
-
-<footer>
-   
-</footer>
+<?php 
+    $obj->getFooter();
+?>
 <script src="drop_down.js">
 
 </script>

@@ -1,3 +1,9 @@
+<?php 
+    include 'baseCode.php';
+    $obj = new LidhjaDB();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,39 +16,10 @@
 </head>
 <body>
     <body>
-      <div class="div-ul">
-        <div class="ul2">
-        <div class="image">
-            <img src="fotot per projekt/logot/logo.png" alt="logo" class="logoImg">
-        </div>
+    <?php 
+    $obj->getHeader();
 
-        
-
-        <div class="teksti">
-            <ul>
-                <li id="links"><a href="index.html">Home</a>
-                    <li id="links"><a href="tv.html">TV Accessories</a>
-                    <li id="links"><a href="smartphones.html">Smartphones</a></li>
-                    <li id="links"><a href="gaming.html">Gaming</a></li>
-                    <li id="links"><a href="contactus.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <a href="login.html" class="user-button"><img src="fotot per projekt/logot/user.png" style="max-width: 25px; margin-top: 5px;" alt=""></a>
-      </div>
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn"><span class="material-symbols-outlined">menu</span></button>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="index.html">Home</a>
-            <a href="tv.html">TV Accessories</a>
-            <a href="gaming.html">Gaming</a>
-            <a href="contactus.html">Contact Us</a>
-        </div>
-      </div>
-      </div>
-    </div>
-      </div>
+?>
       
         <div class="smartphonesp">
           <div class="smartphones">

@@ -58,4 +58,46 @@ class LidhjaDB{
     return $formattedPrice;
   }
 }
+
+class Upload extends LidhjaDB{
+  public $time;
+  public $uploadedFiles;
+  public $uploadDir;
+  
+
+  public function __construct(){
+    parent::__construct();
+    $this->uploadedFiles = isset($_FILES['files']) ? $_FILES['files'] : null;
+  }
+
+
+  public function insertCar(){
+    $this->time = time();
+    $sql = "INSERT INTO produkti VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $this -> conn -> prepare($sql);
+    $stmt -> bind_param("isssssssss", $this->time, $_POST['Prodhuesi'], $_POST['vitiProdhimit'], $_POST['kilometrat'],
+      $_POST['MadhesiaMotorrit'],$_POST['llojiKariserise'], $_POST['llojiShpejtesis'], $_POST['meCilatNgreh'],
+      $_POST['modeli'],$_POST['karburanti'],$_POST['ps'],$_POST['Dogan'],$_POST['Regjistrim']);
+    $stmt -> execute();
+    $stmt -> close();
+  }
+
+  public function createFolder(){
+    mkdir('productPhotos/' . $this->time);
+    $this -> uploadDir = 'productPhotos/' . $this->time . '/'; 
+    if (!is_dir($this -> uploadDir)) {
+        mkdir($this -> uploadDir, 0777, true);
+    }
+    $targetFilePath = $this->uploadDir . 'fotoKryesore.webp';
+    move_uploaded_file($_FILES["fotoKryesor"]["tmp_name"], $targetFilePath);
+  }
+
+  public function insertAll(){
+    if ($this -> isMethodPost()){
+      $this -> insertCar();
+      $this -> createFolder();
+    }
+  }
+
+}
 ?>

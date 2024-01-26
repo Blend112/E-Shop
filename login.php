@@ -1,7 +1,7 @@
 <?php 
-    include 'baseCode.php';
-    $obj = new LidhjaDB();
-
+  include 'loginValidim.php';
+  $obj = new Validate();
+  $obj ->logIn();
 ?>
 
 <!DOCTYPE html>
@@ -65,21 +65,26 @@
 <body>
 
 <div class="login-container">
+  <div class="paralogin">
   <img src="fotot per projekt\logot\logo.png" alt="fotot per projekt\logot\logo.png"> 
   <h2>Login to Your Account</h2>
-  <form action="index.html" method="post">
-    <input type="email" name="email" placeholder="Email address" id="email" required>
-    <div id="emailError"></div>
-    <input type="password" name="password" placeholder="Password" id="password" required>
-    <div id="passwordError"></div>
-    <button type="submit" onclick="validateform()">Sign in</button>
-    <div class="alternative">
-      <p>Or</p>
-       <a href="register.html">Don't have an account? Register</a>
-    </div>
-  </form>
+      <form action="" method="post">
+          <input type="" name="usernameL" placeholder="Username" id="" required>
+            <div id="emailError"></div>
+              <input type="password" name="passwordL" placeholder="Password" id="password" required>
+                <div id="passwordError"></div>
+                  <button class="submit-btn" name="btnL" id = "login-btn" type="submit">Sign In</button>  
+                <div class="alternative">
+              <p>Or</p> 
+              <a href="register.php">Don't have an account? Register</a>
+              </div>
+          </div>
+      </form>
   
 </div>
+<div class="other-buttons-div">
+      <?php $obj->adminButtons();?> 
+        </div>
 <script>
   let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
   let passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
@@ -102,7 +107,9 @@
         }
         alert('You have signed in successfully');
   }
-
+  function degoTeDashboard(){
+    window.location.href = "dashboard.php"
+  }
 
 </script>
 

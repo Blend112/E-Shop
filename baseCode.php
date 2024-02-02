@@ -184,8 +184,22 @@ class Mesazhet extends LidhjaDB {
         
         $sql = "DELETE FROM produkti WHERE numriId = '" . $numriId . "'";
         $conn->query($sql);
-        echo '<h3>produkti me ID : ' . $numriId . ' eshte fshire me sukses </h3>';
+        echo '<script>alert("Produkti eshte fshire me sukses");</script>';
       }
   }
+}
+class register extends LidhjaDB {
+  public function register(){
+    if (isset($_POST['btnR'])){
+      $username = $_POST['username'];
+      $password = $_POST['password'];
+      $email = $_POST['email'];
+      $sql = "insert into account values('".$username."','".$email."','".$password."',0)";
+      $conn = $this->conn;
+      $conn->query( $sql );
+      echo '<h1>Useri u shtua me sukses</h1>';
+
+    }
+  } 
 }
 ?>

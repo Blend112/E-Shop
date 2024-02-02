@@ -1,6 +1,8 @@
 <?php 
     include 'baseCode.php';
-    $obj = new LidhjaDB();
+    $obj = new register();
+    $obj->register();
+
 
 ?>
 
@@ -95,7 +97,7 @@ footer .social-media {
 <div class="register-container">
   <img src="fotot per projekt\logot\logo.png" alt="Logo"> 
   <h2>Register a New Account</h2>
-  <!-- <form action="/register" method="post"> -->
+  <form action="" method="post">
     <input id="username" type="text" name="username" placeholder="Username" required>
     <div id="usernameError"></div>
 
@@ -108,12 +110,12 @@ footer .social-media {
     <input id="passwordconfirm" type="password" name="confirm_password" placeholder="Confirm Password" required>
     <div id="confirm_passwordError"></div>
 
-    <button type="submit" onclick="register()">Register</button>
+    <button type="submit" onclick="register()" name="btnR">Register</button>
     <div class="alternative">
 
-      <a href="login.html">Already have an account? Login</a>
+      <a href="login.php">Already have an account? Login</a>
     </div>
-  <!-- </form> -->
+  </form>
 </div>
 <script>
     let usernameRegex = /^.{8,15}$/;

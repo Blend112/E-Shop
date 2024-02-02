@@ -1,6 +1,7 @@
 <?php
 include "baseCode.php";
 $mesazh = new Mesazhet();
+$mesazh -> checkIfAdmin("log-in.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

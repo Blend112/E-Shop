@@ -1,6 +1,9 @@
 <?php 
     include 'baseCode.php';
     $obj = new LidhjaDB();
+    $sendMessage = new SendMessage();
+    $sendMessage -> insertMessage();
+
 
 ?>
 
@@ -24,10 +27,10 @@
     <div class="formContainer">    
         <h1>Contact Us</h1>    
         <form class="forma" method="post" action="">
-            <input type="text" placeholder="Type your name">
-            <input type="email" placeholder="Type your email">
-            <input type="number" placeholder="Type your phone number">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Type a message"></textarea>
+            <input type="text" placeholder="Type your name" name="emri">
+            <input type="email" placeholder="Type your email"name="email">
+            <input type="tel" placeholder="Type your phone number"name="numri">
+            <textarea name="teksti" id="" cols="30" rows="10" placeholder="Type a message"></textarea>
             <input type="submit" name="" id="formButton" value="Submit">
         </form>
     </div>

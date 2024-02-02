@@ -69,7 +69,7 @@
     </div>
     <div class="form-group">
       <label for="cmimi">cmimi :</label>
-      <input type="number" name="cmimi" required>
+      <input type="text" name="cmimi" required>
     </div>
 
 

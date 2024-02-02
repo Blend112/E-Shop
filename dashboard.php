@@ -23,6 +23,7 @@
       <div class="buttons">
         <button class="hrefButton" onclick="insertProduct()">Shto Produktin</button>
         <button class="hrefButton" onclick="deleteProduct()">Fshij Produktin</button>
+        <button class="hrefButton" onclick="lexoMesazhet()">Lexo Mesazhet</button>
       </div>
   </div>
   
@@ -35,7 +36,10 @@
       window.location.href = "insertProductToDatabase.php"
     }
     function deleteProduct(){
-      window.location.href = "deleteCar.php"
+      window.location.href = "deleteProduct.php"
+    }
+    function lexoMesazhet(){
+      window.location.href = "readMessages.php"
     }
 
   </script>

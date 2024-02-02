@@ -33,7 +33,7 @@
         <div class="tedhenat">
             <h1><?=$obj->row['titulli']?></h1>
             <p><?=$obj->row['tekstikryesor']?></p>
-            <p><?=$obj->row['cmimi']?></p>
+            <h2><?=$obj->row['cmimi']?></h2>
             <a href=""></a>
 
         </div>

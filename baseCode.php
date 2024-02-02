@@ -5,6 +5,7 @@ class LidhjaDB{
   public $conn;
   public $fileName = "";
 
+
   public function __construct()
   {
     $this->db = new DataBaza();
@@ -98,8 +99,8 @@ class Upload extends LidhjaDB{
 
 }
 class products extends LidhjaDB{
-    public function getSmartphones(){
-      $sql = "Select * from produkti where lloji = 'Smartphone'";
+    public function getSmartphones($lloji){
+      $sql = "Select * from produkti where lloji = '".$lloji."'";
       $result = $this->conn->query($sql);
       if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -128,5 +129,63 @@ class parentProduct extends LidhjaDB{
   }
 
 
+}
+class SendMessage extends LidhjaDB {
+  public function insertMessage(){
+    if ($this->isMethodPost()){
+      $sql = "INSERT INTO mesazhi (emri,email,numriTel,mesazhi) VALUES (?, ?, ?, ?)";
+      $stmt = $this -> conn -> prepare($sql);
+
+      $teksti = htmlspecialchars($_POST['teksti'], ENT_QUOTES, 'UTF-8');
+      $emri = htmlspecialchars($_POST['emri'], ENT_QUOTES, 'UTF-8');
+      $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
+      $numritel = htmlspecialchars($_POST['numri'], ENT_QUOTES, 'UTF-8');
+      
+      $stmt -> bind_param("ssss", $emri,$email,$numritel, $teksti);
+      $stmt -> execute();
+      $stmt -> close();
+      echo "<h1>MESAZHI U DERGUA </h1>";
+    }
+  }
+}
+class Mesazhet extends LidhjaDB {
+  public function showMessages(){
+      $sql = 'SELECT * FROM mesazhi';
+      $result = $this->conn->query($sql);
+      while(($row = $result->fetch_assoc())!= null){
+        echo "<tr>";
+        echo "<td>".$row['emri']."</input></td>";
+        echo "<td>".$row['email']."</td>";
+        echo "<td>".$row['numriTel']."</td>";
+        echo "<td>".$row['mesazhi']."</td>";
+        echo "</tr>";
+      }
+    }
+  }
+  class Delete extends LidhjaDB {
+    public function deleteCar(){
+      $sql = "SELECT * FROM produkti";
+      $result = $this->conn->query($sql);
+
+      while (($row = $result->fetch_assoc())!= null) {
+        echo "<tr>";
+        echo "<td>" . $row['numriId'] . "</td>";
+        echo "<td>" . $row['tekstikryesor'] . "</td>";
+        echo '<td><a href="deleteScript.php?product=' . $row['numriId'] . '">Delete Now</a></td>';
+        echo "</tr>";
+    }
+  }
+  }
+  class DeleteScript extends LidhjaDB {
+    public function deleteFromDb(){
+      if(isset($_GET['product'])){
+        $numriId = $_GET['product'];
+        $conn = $this->conn;
+        
+        $sql = "DELETE FROM produkti WHERE numriId = '" . $numriId . "'";
+        $conn->query($sql);
+        echo '<h3>produkti me ID : ' . $numriId . ' eshte fshire me sukses </h3>';
+      }
+  }
 }
 ?>

@@ -24,7 +24,7 @@
         <div class="smartphonesp">
           <div class="smartphones">
             <?php
-            $obj->getSmartphones();
+            $obj->getSmartphones("Smartphone");
             ?>
           </div>
         </div>

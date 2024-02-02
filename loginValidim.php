@@ -48,7 +48,6 @@ public function logIn(){
           if ($_SESSION['isAdmin'] == true){
             echo '<button class="other-btn" onclick = "degoTeDashboard()">Dashboard</button>';
           }
-            echo '<button class="other-btn" onclick = "redirectToMessage()">Dërgo Mesazh</button>';
         }
         if(sizeof($_SESSION) != 0){
           echo '<style> .paralogin{display: none;} </style>';

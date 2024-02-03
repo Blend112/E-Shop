@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
   }
-  .login-container input[type="email"],
+  .login-container input[type="text"],
   .login-container input[type="password"] {
     margin-bottom: 10px;
     padding: 10px;
@@ -68,8 +68,8 @@
   <div class="paralogin">
   <img src="fotot per projekt\logot\logo.png" alt="fotot per projekt\logot\logo.png"> 
   <h2>Login to Your Account</h2>
-      <form action="" method="post">
-          <input type="" name="usernameL" placeholder="Username" id="" required>
+      <form action="adminPage.php" method="post">
+          <input type="text" name="usernameL" placeholder="Username" id="" required>
             <div id="emailError"></div>
               <input type="password" name="passwordL" placeholder="Password" id="password" required>
                 <div id="passwordError"></div>
@@ -82,9 +82,6 @@
       </form>
   
 </div>
-<div class="other-buttons-div">
-      <?php $obj->adminButtons();?> 
-        </div>
 <script>
   let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
   let passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
@@ -107,9 +104,7 @@
         }
         alert('You have signed in successfully');
   }
-  function degoTeDashboard(){
-    window.location.href = "dashboard.php"
-  }
+
 
 </script>
 

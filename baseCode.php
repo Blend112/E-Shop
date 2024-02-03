@@ -144,7 +144,7 @@ class SendMessage extends LidhjaDB {
       $stmt -> bind_param("ssss", $emri,$email,$numritel, $teksti);
       $stmt -> execute();
       $stmt -> close();
-      echo "<h1>MESAZHI U DERGUA </h1>";
+      echo " <script> alert ('MESAZHI U DERGUA') </script>";
     }
   }
 }
@@ -163,7 +163,7 @@ class Mesazhet extends LidhjaDB {
     }
   }
   class Delete extends LidhjaDB {
-    public function deleteCar(){
+    public function deleteProduct(){
       $sql = "SELECT * FROM produkti";
       $result = $this->conn->query($sql);
 

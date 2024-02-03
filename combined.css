@@ -76,7 +76,7 @@ a:active {
 }
 
 .login-button {
-    background-color: orange;
+    background-color: hsl(39, 100%, 50%);
     color: white;
     padding: 5px 10px;
     border: none;

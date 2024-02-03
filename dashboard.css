@@ -1,0 +1,32 @@
+body{
+    height: 80vh;
+}
+.buttonBody{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 40px;
+
+    
+}
+.buttonBody h1 {
+    color: black;
+    font-size: 60px;
+}
+
+
+.buttons  button{
+        width: 250px;
+        height: 75px;
+        border:none ;
+        border-radius: 20px;
+        background-color:hsl(39, 100%, 50%);
+        color: aliceblue;
+        font-size: 18px;
+        margin-left: 25px ;
+    }
+    
+

@@ -9,6 +9,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+      table{
+        max-width: 95%;
+        margin-inline: auto;
+        height: 1700px;
+        
+      }
+      td{
+        max-width: 1200px;
+        margin: 20px;
+        border: 1px solid black;
+      }
+
+      th{
+        border: 1px solid black;
+      }
+    </style>
+
 </head>
 <body>
 <div class="tableDiv">
@@ -19,7 +38,7 @@
         <th>Delete</th>
       </tr>
       <?php 
-        $del -> deleteCar();
+        $del -> deleteProduct();
       ?>
     </table>
   </div>
